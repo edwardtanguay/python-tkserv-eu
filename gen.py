@@ -1,4 +1,5 @@
 import site_parts
+import tools
 
 with open("/var/www/python/index.html","w") as file:
     file.write(site_parts.header() + """
@@ -11,6 +12,12 @@ with open("/var/www/python/index.html","w") as file:
     <li>cd ~/projects/python</li>
     <li>vim gen.py</li>
     <li>sudo python gen.py</li>
+    <li>repo is here: 
+<ul>
+    <li><a href="https://github.com/edwardtanguay/python-tkserv-eu/blob/dev/gen.py" target="_blank">gen.py</a></li>
+    <li><a href="https://github.com/edwardtanguay/python-tkserv-eu/blob/dev/site_parts.py" target="_blank">site_parts.py</a></li>
+</ul>
+    </li>
 </ul>
 <h2>Vim tips</h2>
 <ul>
@@ -37,6 +44,8 @@ with open("/var/www/python/index.html","w") as file:
 <h4>Slice</h4>
 """ + site_parts.slice() + """
 
+<h4>function test</h4>
+""" + tools.uppercase_first_letter("this is a test") + """
 
 </body>
 </html>
